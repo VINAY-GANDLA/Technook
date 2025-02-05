@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transition Effect</title>
-  <link rel="stylesheet" href="project1.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Web Page</title>
+        <link rel="stylesheet" href="Teachnook_Project.css">
+    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White to Black Transition</title>
+
 </head>
 <body>
-  <div id="root"></div>
-  <script src="PROJECT1.jsx"></script>
+    <div id="root"></div>
+
+    <!-- React and ReactDOM CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Link to React Script -->
+    <script src="Teachnook_project.js" type="text/babel"></script>
+<body class="light-mode">
+    <div class="container">
+        <h1>White to Black Transition</h1>
+        <button onclick="toggleMode()">Go to Dark Mode</button>
+    </div>
+
+    <script>
+        function toggleMode() {
+            let body = document.body;
+            let button = document.querySelector("button");
+
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                button.innerText = "Go to Light Mode";
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                button.innerText = "Go to Dark Mode";
+            }
+        }
+    </script>
 </body>
 </html>
