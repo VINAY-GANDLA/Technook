@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s ease;
+}
+
+.white-section {
+  background-color: white;
+  color: black;
+}
+
+.black-section {
+  background-color: black;
+  color: white;
+}
