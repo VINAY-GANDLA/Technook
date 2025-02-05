@@ -1,22 +1,45 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+body {
   font-family: Arial, sans-serif;
-}
-
-.section {
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background-color 1s ease;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  transition: background-color 1s, color 1s;
 }
 
-.white-section {
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.light-mode button {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode button {
   background-color: white;
   color: black;
 }
 
-.black-section {
-  background-color: black;
-  color: white;
+button:hover {
+  transform: scale(1.1);
 }
